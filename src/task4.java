@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Arrays;
 import java.util.Scanner;
 
     public class task4 {
@@ -7,8 +8,15 @@ import java.util.Scanner;
 
             Scanner input = new Scanner( System.in );
             System.out.print("Введите число в бинарном формате = ");
+            int binarynum = input.nextInt();
 
-            int  binarynum =input.nextInt();
+            //Преобразование в строку
+            String strBinaryNum = Integer.toString(binarynum);
+
+            //Перевод строки в массив
+            String[] strArr = strBinaryNum.split("");
+            System.out.println(Arrays.toString(strArr));
+
             int binary=binarynum;
             int decimal = 0;
             int power = 0;
@@ -23,8 +31,6 @@ import java.util.Scanner;
 
                 }
             }
-            System.out.println("Число в десятичном формате = " + decimal); ;
         }
-
     }
 
