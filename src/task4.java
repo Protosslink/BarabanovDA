@@ -15,13 +15,13 @@ import java.util.Scanner;
 
             //Перевод строки в массив
             String[] strArr = strBinaryNum.split("");
-            System.out.println(Arrays.toString(strArr));
 
-            for (int i = 0; i <= strArr.length; i++) {
+
+            for (int i = 0; i < strArr.length; i++) {
                 int i3 = 0;
                 try {
                     i3 = Integer.parseInt(strArr[i]);
-                    System.out.print(i3 + " ");
+
                 } catch (NumberFormatException e) {
                     System.err.println("Неверный формат строки!");
                 }
@@ -42,6 +42,7 @@ import java.util.Scanner;
 
                         }
                     }
+                    System.out.println("Бинарный = "+binarynum+" Десятичный = "+ decimal);
                 }
             }
         }
