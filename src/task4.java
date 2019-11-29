@@ -27,6 +27,7 @@ import java.util.Scanner;
                 }
                 if (i3 >= 2) {
                     System.out.println("Введено число отличное от бинарного формата!");
+                    break;
                 } else {
                     int binary = binarynum;
                     int decimal = 0;
