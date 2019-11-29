@@ -20,5 +20,6 @@ public class task16 {
              System.out.println(importTxt.nextLine());
 
          }
+         importTxt.close();
     }
 }
