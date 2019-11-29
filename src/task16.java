@@ -20,6 +20,7 @@ public class task16 {
              System.out.println(importTxt.nextLine());
 
          }
+         //Закрываем сканер
          importTxt.close();
     }
 }
