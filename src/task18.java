@@ -23,8 +23,29 @@ public class task18 {
         } catch (FileNotFoundException noneTestTask18) {
             System.out.println("Файл не найден");
         }
-
-        //Подсчет количества строк в файле
         System.out.println("Колличество строк " + lines);
+
+        //Запись в файл
+        String str;
+        int x = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try (FileWriter fw = new FileWriter("testTask18.txt")) {
+            {
+                while (x < lines) {
+                    System.out.println(": ");
+                    str = br.readLine();
+
+                    if (str.compareTo("stop") == 0) break;
+
+                    str = str +"\r\n";
+                    fw.write(str);
+                    x++;
+                }
+            }
+        } catch (IOException esr) {
+            esr.printStackTrace();
+            System.out.println("Ошибка ввода-вывода: " + esr );
+        }
+
     }
 }
