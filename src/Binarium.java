@@ -12,8 +12,9 @@ public class Binarium {
         String[] arrStrBinNum = strBinNum.split("");
         //Проверка на бинарный формат
         int i3 = 0;
-        int sumNum = 0;
-        for (int i = 0, y = arrStrBinNum.length - 1; i < arrStrBinNum.length; i++, y--) { // количество итериций равно длинне массива
+        int pow = 1;
+        int summary = 0;
+        for (int i = arrStrBinNum.length - 1, y = 0; y < arrStrBinNum.length; i--, y++) { // количество итерaций равно длине массива
             try {
                 i3 = Integer.parseInt(arrStrBinNum[i]);
             } catch (NumberFormatException e) {
@@ -21,20 +22,24 @@ public class Binarium {
             }
             if (i3 >= 2) {
                 System.out.println("Введено число отличное от бинарного формата!");
+                break;
             } else {
-                while (y > 0) {
-                    if(y == 0){
-                        break;
-                    }else {
-
-                    }
+                if (pow == 1) {
+                    summary = i3 * pow;
+                    pow = 2;
+                } else {
+                    summary = summary + i3 * pow;
+                    pow = pow * 2;
                 }
             }
+        }
+        if (i3 >= 2) {
+            System.out.println("Нужно ввести число в бинарном формате!");
+        } else {
+            System.out.println(summary);
         }
     }
 }
 
 
-//1101101
-//0123456 i
-//6543210 y
+

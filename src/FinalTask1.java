@@ -33,9 +33,7 @@ public class FinalTask1 {
                 }
             }
         }
-        if (i3 >= 2) {
-            System.out.println("Нужно ввести число в бинарном формате!");
-        } else {
+        if (i3 == 0 | i3 == 1) {
             System.out.println(summary);
         }
     }
